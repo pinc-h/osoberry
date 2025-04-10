@@ -1,21 +1,34 @@
+Num,sex,coords1,coords2,size,light,flowers,disclude,notes
 1, male, 48.46013° N, 123.31985° W, large, shaded, few fresh
+2, male, 48.46016° N, 123.32001° W, small, heavily shaded, few old, disclude
 3, male, 48.46023° N, 123.32016° W, large, shaded, few fresh
-4, female, 48.46035° N, 123.32042° W, large, shaded, few fresh
+4, female, 48.46035° N, 123.32042° W, large, shaded, few fresy
 5, male, 48.46012° N, 123.32020° W, medium, shaded, few old, further in from the dirt path from 6
 6, female, 48.46016° N, 123.32020° W, medium, shaded, few old
 7, male, 48.46018° N, 123.32020° W, medium, shaded, few old
 8, female, 48.46019° N, 123.32020° W, medium, shaded, few old
+9, male, 48.46022° N, 123.32020° W, small, shaded, few old,disclude
+10, male, 48.46026° N, 123.32028° W, small, shaded, many old,disclude
 11, female, 48.46026° N, 123.32029° W, medium, shaded, many old
 12, female, 48.46023° N, 123.32030° W, medium, shaded, many old
 13, female, 48.46026° N, 123.32035° W, medium, shaded, few fresh,,behind and to the right of 12 very low to ground but spread towards road
 14, female, 48.46027° N, 123.32033° W, large, shaded, many fresh,,to the right of 13 coords inaccurate
 15, male, 48.46030° N, 123.32036° W, large, shaded, few old
+16, female, 48.46028° N, 123.32036° W, small, shaded, few fresh,disclude
+17, female, 48.46023° N, 123.32042° W, small, sun, few fresh,disclude
+18, male, 48.46035° N, 123.32063° W, small, sun, few fresh,disclude
+19, female, 48.46034° N, 123.32061° W, small, sun, few fresh,disclude,right of 18 coords inaccurate
+20, female, 48.46033° N, 123.32062° W, small, sun, few fresh,disclude
+21, female, 48.46038° N, 123.32091° W, small, sun, few fresh,disclude,last before clearing and Himalayan blackberry
 22, male, 48.46038° N, 123.32104° W, medium, shaded, few old
 23, male, 48.46039° N, 123.32104° W, large, shaded, many fresh,,conifer and space between 22 and 23
 24, male, 48.46040° N, 123.32102° W, medium, sun, few fresh,,right of 25
 25, female, 48.46042° N, 123.32128° W, medium, sun, few old,,this is the front most right plant before park entrance beside the crosswalk button
-26, female, 48.46041° N, 123.32128° W, very large, sun, many many fresh,,the biggun' at the entrance behind 33
-28, male, 48.46018° N, 123.32136° W, large, shaded, few old
-30, female, 48.45998° N, 123.32164° W, large, sun,many fresh
-32, female, 48.45951° N, 123.32216° W, medium, sun, many fresh
-33, male, 48.46032° N, 123.32121° W, very large, sun, many many fresh
+26, female, 48.46041° N, 123.32128° W, very large, sun, many many fresh,,the biggun at the entrance behind 33
+27,female,48.46027° N, 123.32138° W,large, shaded, few old,disclude
+28,male,48.46018° N, 123.32136° W,large, shaded, few old
+29,female,48.46010° N, 123.32134° W,small, sun, few fresh,disclude
+30,female,48.45998° N, 123.32164° W,large,sun,many fresh
+31,female,48.45999° N, 123.32163° W, small, sun, few fresh,yes
+32,female, 48.45951° N, 123.32216° W, medium, sun, many fresh
+33,male, 48.46032° N, 123.32121° W, very large, sun, many many fresh
