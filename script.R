@@ -9,8 +9,6 @@ visits_summary <- data %>%
   summarise(total_visits = sum(visits, na.rm = TRUE)) %>%
   mutate(sex = factor(sex, levels = c("f", "m"), labels = c("Female", "Male")))
 
-
-# Create plot
 ggplot(visits_summary, aes(x = sex, y = total_visits)) +
   geom_bar(stat = "identity", width = 0.7, fill = "black", color = "black") +
   labs(title = "Total Osoberry pollinator visits by sex", x = NULL, y = "Total Visits") +
@@ -39,7 +37,7 @@ ggplot(indiv_summary, aes(x = indiv, y = total_visits)) +
     labels = c("f" = "Female", "m" = "Male")
   ) +
   labs(
-    title = "Osoberry pollination visits by individual (n = 26)",
+    title = "Osoberry pollinator visits by individual (n = 26)",
     x = "Individual ID", 
     y = "Total Visits"
   ) +
