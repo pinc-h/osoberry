@@ -26,10 +26,12 @@ fetch_inat_data <- function(term_id) {
     page <- page + 1
     Sys.sleep(0.5)
   }
+  
   bind_rows(all_obs)
+  
 }
 
-sex_obs <- fetch_inat_data(9)        # Sex
+sex_obs <- fetch_inat_data(9)
 
 # Extract sex from the dataframe within the annotations column and add as a new column
 sex_obs <- sex_obs %>%
