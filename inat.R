@@ -1,5 +1,14 @@
-library(tidyverse)
+library(httr)
+library(jsonlite)
+library(dplyr)
+library(tidyr)
 library(ggpattern)
+library(sf)
+library(ggspatial)
+library(rnaturalearth)
+library(rnaturalearthdata)
+
+library(ggplot2)
 
 base_url <- "https://api.inaturalist.org/v1/observations"
 
@@ -56,3 +65,63 @@ sex_obs <- sex_obs %>%
 
 male_obs <- sex_obs %>% filter(sex == "Male")
 female_obs <- sex_obs %>% filter(sex == "Female")
+
+sex_counts <- sex_obs %>%
+  filter(!is.na(sex)) %>%
+  count(sex, name = "Count")
+
+plot1 <- sex_counts %>%
+  ggplot(aes(x = sex, y = Count)) + 
+  geom_bar(stat = "identity", width = 0.7, fill = "black", color = "black") +
+  labs(x = "Sex", y = "Observations") +
+  theme_classic(base_size = 14) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+    )
+plot1
+ggsave(filename = "plot1.jpg", plot = plot1, height = 5, width = 7, units = "in")
+
+# Extract lat/long
+sex_obs_geo <- sex_obs %>%
+  separate(
+    location,
+    into = c("latitude", "longitude"),
+    sep = ",", 
+    convert = TRUE
+  ) %>%
+  filter(
+    !is.na(sex),
+    !is.na(latitude),
+    !is.na(longitude),
+    between(longitude, -140, -100),
+    between(latitude, 25, 60)
+  )
+
+west_na <- ne_countries(
+  scale = "medium",
+  continent = "North America",
+  returnclass = "sf"
+) %>% 
+  st_crop(xmin = -140, ymin = 25, xmax = -100, ymax = 60)  # Crops to west NA
+
+plot2 <-ggplot() +
+  geom_sf(data = west_na, fill = "gray90", color = "gray70") + 
+  geom_point(
+    data = sex_obs_geo,
+    aes(x = longitude, y = latitude, color = sex),
+    size = 3, alpha = 0.8
+  ) +
+  coord_sf(
+    xlim = c(-128.5, -120),
+    ylim = c(35, 51.5),
+    expand = FALSE
+  ) +
+  scale_color_manual(
+    values = c("Female" = "deeppink", "Male" = "dodgerblue"),
+    guide = guide_legend(title = NULL)
+  ) +
+  theme_void()
+
+plot2
+  

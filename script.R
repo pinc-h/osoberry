@@ -12,7 +12,7 @@ visits_summary <- data %>%
 plot1 <- visits_summary %>%
   ggplot(aes(x = sex, y = total_visits)) + 
   geom_bar(stat = "identity", width = 0.7, fill = "black", color = "black") +
-  labs(title="Total Osoberry pollinator visits by sex", X = NULL, y = "Total Visits") +
+  labs(title="Total Osoberry pollinator visits by sex", x = NULL, y = "Total Visits") +
   theme_minimal(base_size = 14)
 plot1
 ggsave(filename = "plot1.jpg", plot = plot1, height = 5, width = 7, units = "in")
@@ -37,25 +37,3 @@ plot2 <- indiv_summary %>%
   theme(legend.position = "top")
 plot2
 ggsave(filename = "plot2.jpg", plot = plot2, height = 5, width = 7, units = "in")
-
-ggplot(indiv_summary, aes(x = indiv, y = total_visits)) +
-  geom_col_pattern(
-    aes(pattern = sex),
-    fill = "white",
-    colour = "black",
-    pattern_density = 0.35,
-    pattern_spacing = 0.01
-  ) +
-  scale_pattern_manual(
-    values = c("f" = "stripe", "m" = "crosshatch"),
-    labels = c("f" = "Female", "m" = "Male")
-  ) +
-  labs(
-    title = "Osoberry pollinator visits by individual (n = 26)",
-    x = "Individual ID", 
-    y = "Total Visits"
-  ) +
-  theme_classic() +
-  theme (
-    legend.position = "top"
-  )
