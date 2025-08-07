@@ -13,9 +13,13 @@ plot1 <- visits_summary %>%
   ggplot(aes(x = sex, y = total_visits)) + 
   geom_bar(stat = "identity", width = 0.7, fill = "black", color = "black") +
   labs(title="Total Osoberry pollinator visits by sex", x = NULL, y = "Total Visits") +
-  theme_minimal(base_size = 14)
+  theme_classic(base_size = 14) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
 plot1
-ggsave(filename = "plot1.jpg", plot = plot1, height = 5, width = 7, units = "in")
+ggsave(filename = "plot1_sex.jpg", plot = plot1, height = 5, width = 7, units = "in")
 
 #---------------------
 
@@ -33,7 +37,11 @@ plot2 <- indiv_summary %>%
   scale_pattern_manual(values = c("f" = "stripe", "m" = "crosshatch"),
                        labels = c("f" = "Female", "m" = "Male")) + 
   labs(title="Osoberry pollinator visits by individual (n = 26)", x = "Individual ID", y = "Total Visits", fill = "Sex") +
-  theme_classic(base_size = 14) + 
-  theme(legend.position = "top")
+  theme_classic(base_size = 14) +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    legend.position = "top"
+  ) 
 plot2
-ggsave(filename = "plot2.jpg", plot = plot2, height = 5, width = 7, units = "in")
+ggsave(filename = "plot2_indiv.jpg", plot = plot2, height = 5, width = 7, units = "in")
