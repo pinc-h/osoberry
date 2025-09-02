@@ -122,6 +122,7 @@ plot2 <-ggplot() +
     guide = guide_legend(title = NULL)
   ) +
   theme_void()
-
 plot2
+
+
 ggsave(filename = "plot2.jpg", plot = plot2, height = 7, width = 6, units = "in")
