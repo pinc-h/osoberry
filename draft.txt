@@ -1,0 +1,46 @@
+
+Larger inflorescences in male Oemleria cerasiformis (Osoberry) may not attract more pollinators than their female counterparts
+
+-----
+Abstract
+ Oemleria cerasiformis is a monotypic dioecious shrub native to the Pacific Northwest region of North America that likely relies on insects to be pollinated. Males have large inflorescences with greater biomass than females. This has been hypothesized to cause a male biased sex ratio (Allen 1986, Antos and Allen 1988). We might expect the rate at which insects visit a flower to be positively correlated to flower size, however I observed that male Oemleria did not attract more insect pollinators than females over a period of four weeks. Supplementarily, I compared sex-annotated iNaturalist observations for male and female Oemleria  to see if this biased sex ratio resulted in a greater number of male observations. However, there was no marked increase in male observations. The volume of male inflorescence is likely the driving factor of this biased sex ratio, and is not exacerbated by preferential pollinator visitation.  
+----- Introduction 
+Evolution in the PNW, Dioeciousness as a trait
+
+Habitat Range
+
+
+----- Methods
+
+Individual and site selection I estimated pollinator visitation of Oemleria by counting the number of insects that appeared on an individual Oemleria over a period of 10 minutes. I originally surveyed 33 Oemleria individuals, from which I selected 19 for study. Individuals were discounted if they appeared to be nearing the end of their blooming period, were less than a metre in height, or were hard to differentiate (a few individuals growing intertwined as a single shrub). All Oemleria individuals were from a 2km radius around Mt. Tolmie, Victoria, British Columbia, Canada. Individuals were numbered walking east across Cedar Hill Road, then south into Mt. Tolmie Park. Individuals were selected from a variety of sites, ranging from low sunlight and low elevation areas growing beside a busy street, to direct sunlight and higher elevation closer to Mt. Tolmie's summit (120m). The general size of the individual was recorded, whether the site was shaded, and if the flowers looked fresh or old on April 1 2025.
+
+Visitation counting
+Individual Oemleria were observed across 14 days through the month of April 2025. Visitation counting occurred on days without rain. Visitation counting was conducted by observing an individual Oemleria for 10 minutes and counting the number of times insects landed on an and appeared to be pollinating an inflorescence.
+
+iNaturalist Data Collection
+All Oemleria observations on iNaturalist were annotated for sex after the last day of visitation counting, April 24 2025. Annotated observations were then scraped for analysis into R using the `httr` and `jsonlite` packages.
+
+
+----- Results 
+Visitation Experiment
+The difference in aggregate number of visits between male and female Oemleria was small. Some individuals had their inflorescences decay at a much higher rate, and thus showed a steep decline in visits over the 14 days of observation. 
+[observed_visitation.jpg]
+Figure 1. Number of visits per Oemleria individual. Individuals 9, 10, 11, 14, 24, and 25 showed the least number of visits and were all growing in a shaded area very close together. Individuals 26, 28, 30, 31, 32, and 33 were relatively isolated and in direct sun. Individuals 27 and 31 were close to larger Oemleria, and appeared to have fewer inflorescences.  
+
+Trends in iNaturalist Data
+[Map]
+Figure x.
+
+----- Discussion
+ Since Oemleria growth is highly dependent on moisture and light exposure, the range of light exposure and moisture across individuals could be a large contributor to inflorescence sizes (Antos and Allen 1990). This may explain why individuals 30 and 32, despite being female, were observed to have many fresh flowers at the start of data collection and showed a high number of pollinator visits.
+
+It has also been noted that male and female O. cerasiformis produce different scents. This may also play a role in pollinator attraction. I did not assess pollinator composition, but did observe a change in the species composition over the four weeks I collected data. Bibio sp. were abundant on both male and female Oemleria in the first two weeks, but became scarce around mid-April.   References Flowering pattern and fruit production in the dioecious shrub Oemleria cerasiformis Geraldine Allen, 1986, Canadian Journal of Botany, Vol. 64 pp. 1216-1220
+
+Relative reproductive effort in males and females of the dioecious shrub Oemleria cerasiformis
+J. Antos and G. Allen, 1988, Oecologia, 1988, Vol. 76 pp. 111-118
+
+Habitat Relationships of the Pacific Coast Shrub Oemleria Cerasiformis (rosaceae)
+Joseph A. Antos and Geraldine A. Allen, 1990, Madrono (California Botanical Society), Vol. 37  pp. 249-260
+
+
+

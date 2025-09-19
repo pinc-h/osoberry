@@ -2,7 +2,7 @@ Num,sex,coords1,coords2,size,light,flowers,disclude,notes
 1, male, 48.46013° N, 123.31985° W, large, shaded, few fresh
 2, male, 48.46016° N, 123.32001° W, small, heavily shaded, few old, disclude
 3, male, 48.46023° N, 123.32016° W, large, shaded, few fresh
-4, female, 48.46035° N, 123.32042° W, large, shaded, few fresy
+4, female, 48.46035° N, 123.32042° W, large, shaded, few fresh
 5, male, 48.46012° N, 123.32020° W, medium, shaded, few old, further in from the dirt path from 6
 6, female, 48.46016° N, 123.32020° W, medium, shaded, few old
 7, male, 48.46018° N, 123.32020° W, medium, shaded, few old
